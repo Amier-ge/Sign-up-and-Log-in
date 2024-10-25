@@ -165,12 +165,12 @@ int confirm(char *id, char *password, char *name) {
 	strcpy(check, word);
 	for(i = 0 ; *(check + i) != '\0' ; i++) if( ( *(check + i) >= 'a' ) && ( *(check + i) <= 'z') ) *(check + i) -= 32;
 
-	if( strcmp(check, "YES") == 0 ) {
+	if( (strcmp(check, "YES") == 0) || (strcmp(check, "Y") == 0) ) {
 		free(check);
 		return 0;
 	}
 
-	else if( strcmp(check, "NO") == 0 ) {
+	else if( (strcmp(check, "NO") == 0) || (strcmp(check, "N") == 0) ) {
 		free(check);
 		return 1;
 	}

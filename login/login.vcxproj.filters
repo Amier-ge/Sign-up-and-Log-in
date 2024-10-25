@@ -30,6 +30,9 @@
     <ClCompile Include="sign_up_lib.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="limit_login.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myheader.h">

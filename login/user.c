@@ -3,9 +3,9 @@
 void user(USER *user_name) {
 
 	//Add freely
-	USER David = {"David", "daiocd", "ps12345!!"};
-	USER Helen = {"Helen", "jinvdef", "lgehelen105!"};
-	USER Christopher = {"Christopher", "daypretty", "helloworld123!"};
+	USER David = {"David", "david123", "ps12345!!"};
+	USER Helen = {"Helen", "helen123", "helen123!"};
+	USER Christopher = {"Christopher", "chris123", "helloworld123!"};
 
 	user_name[0] = David;
 	user_name[1] = Helen;

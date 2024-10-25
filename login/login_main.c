@@ -12,7 +12,7 @@ int main() {
 
 	if( login_or_sign_up() == 2 ) sign_up(id, password, name, user_name);	// Sign up
 
-	login(id, password, &index, user_name);
+	login(id, password, &index, user_name); // Login
 
 	return 0;
 }

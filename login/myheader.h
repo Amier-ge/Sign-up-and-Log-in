@@ -7,18 +7,21 @@
 #include<stdlib.h>
 #include<Windows.h>
 
-#define NAME_LEN			100
-#define ID_LEN				80
+#define NAME_LEN				100
+#define ID_LEN					80
 #define PASSWORD_LEN			80
-#define USER_MAX			80
+#define USER_MAX				80
 
-#define MIN_ID_LEN			5
-#define MAX_ID_LEN			13
+#define MIN_ID_LEN				5
+#define MAX_ID_LEN				13
 #define MIN_PASSWORD_LEN		8
 #define MAX_PASSWORD_LEN		15
 #define MIN_PASSWORD_TYPE		3
-#define WRONG_LOGIN			5
+#define LIMIT_LOGIN				5
 #define RESTRICT_TIME			5
+
+#define COLUMN					20
+#define ROW						5
 
 typedef struct _USER {
 
@@ -31,10 +34,12 @@ void user(USER *);
 int login_or_sign_up();
 
 // Login code
+void gotoxy(int , int );
 int login_page(char *, char *, int, USER *);
 int check_ID(char *, char *, int, USER );
 int check_PASSWORD(char *, char *, int, USER *);
-void login(char *, char *, int *, USER *);
+int limit_login(int );
+int login(char *, char *, int *, USER *);
 
 // Sign up code
 void again_ID(char *, char *, char *);

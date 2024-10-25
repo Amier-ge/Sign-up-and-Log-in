@@ -43,27 +43,31 @@ int check_PASSWORD(char *id, char *password, int *index, USER *user_) {
 	}
 }
 
-void login(char *id, char *password, int *index, USER *user_) {
+int login(char *id, char *password, int *index, USER *user_) {
 
 	int i, check, count = 0;
 	int (*login_func[3])(char *, char *, int *, USER *) = {login_page, check_ID, check_PASSWORD};
 	
-	for(i = 0 ; i < 3 ; i++) {
+	do{
 
-		check = login_func[i](id, password, index, user_);
+		for(i = 0 ; i < 3 ; i++) {
+
+			check = login_func[i](id, password, index, user_);
 		
-		if(check) {
-			i = -1;
-			count++;
+			if(check) {
+
+				count++;
+				break;
+			}
 		}
 
 		if(count >= 5) {
-			puts("Please try logging in again later.");
-			exit(0);
+			
+			if( limit_login(count) ) return 0;
 		}
-	}
+
+	} while(check);
 
 	system("cls");
 	printf("User : %s\nWELCOME!!\n\n", user_[*index].name);
-
 }

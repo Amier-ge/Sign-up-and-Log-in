@@ -74,6 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="limit_login.c" />
     <ClCompile Include="sign_up_lib.c" />
     <ClCompile Include="login_lib.c" />
     <ClCompile Include="login_main.c" />
